@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Symfony</title>
+</head>
+<body class="position-relative">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container fw-light">
+        <a class="navbar-brand text-white" href="#">Symfony Demo Application</a>
+        <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#navbarNavAltMarkup" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav align-items-center">
+                <i class="bi bi-house-door text-white "></i>
+                <a class="nav-link pb-0 text-white " href="#">Homepage</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- MAIN -->
+<div class="container pt-4">
+    <div class="row">
+        <!-- SECURE SIGN IN -->
+        <div class="col-12 col-md-3 bg-light p-4">
+            <div class="d-flex pb-3">
+                <i class="bi bi-lock"></i>
+                <h3 class>Secure Sign in</h3>
+            </div>
+            <form action="" class="d-flex flex-column" method="get">
+                <label class="fw-semibold pb-1" for="username">Username</label><input class="form-control mb-3" id=""
+                                                                                      name="username" type="text"
+                                                                                      value="anna_admin">
+                <label class="fw-semibold pb-1" for="password">Password</label><input class="form-control mb-3"
+                                                                                      name="password" type="password"
+                                                                                      value="lalala">
+                <div class="">
+                    <i class="bi bi-box-arrow-in-right"></i><input class="btn btn-dark" type="submit" value="Sign in">
+                </div>
+            </form>
+        </div>
+        <!-- TRY EITHER OF THE FOLL -->
+        <div class="col-12 col-md-6 px-4">
+            <h3 class="pt-4"><i class="bi bi-arrow-left"></i>Try either of the following users</h3>
+            <table class="table table-striped table-bordered mb-4">
+                <thead>
+                <tr>
+                    <th scope="col">Username</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Role</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>john_user</td>
+                    <td>kitten</td>
+                    <td><span class="text-uppercase bg-light">role_user</span> (regular user)</td>
+                </tr>
+                <tr>
+                    <td>anna_admin</td>
+                    <td>kitten</td>
+                    <td><span class="text-uppercase bg-light">role_admin</span> (administrator))</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="border p-2">
+                <p class="mb-0"><span class="bg-success fs-6 text-uppercase px-2 rounded text-white me-1">note</span>If
+                    these users
+                    don't work, reload application fixtures by
+                    running this command from the terminal:</p>
+                <p class="d-grid btn btn-light btn-block mb-4">$ php app/console doctrine:fixtures:load</p>
+
+                <p class="mb-0"><span class="bg-success fs-6 text-uppercase px-2 rounded text-white me-1">tip</span>If
+                    you want to create new-users, run this other command:</p>
+                <p class="d-grid btn btn-light btn-block">$ php app/console app:add-user</p>
+            </div>
+        </div>
+        <!-- THIS IS A DEMO APPLICATION... -->
+        <div class="col-12 col-md-3 px-0">
+            <div class="bg-light p-4 mb-4">
+                <p>This is a <span class="fw-bold">demo application</span> built in the Symfony Framework to illustrate
+                    the recomended way of developing Symfony Application.</p>
+                <p>For more information, check out the <span class="text-success fw-bold">Symfony Documentation</span>.
+                </p>
+            </div>
+            <p class="mb-4">Click on this button to show the source code of the <span class="fw-bold">Controller</span>
+                and <span
+                        class="fw-bold">template</span> used to render this page.</p>
+            <div class="d-grid">
+                <button class="text-white p-3 btn btn-secondary btn-lg"><i class="bi bi-gear-fill pe-2"></i><span>Show source code</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="bg-light position-absolute bottom-0" ">
+    <div><span>2015 - The Symfony project</span>
+        <span>MIT Licence</span></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
