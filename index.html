@@ -9,7 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
     <title>Symfony</title>
 </head>
-<body class="position-relative">
+
+<body class="d-flex flex-column min-vh-100">
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container fw-light">
@@ -31,22 +32,26 @@
 <div class="container pt-4">
     <div class="row">
         <!-- SECURE SIGN IN -->
-        <div class="col-12 col-md-3 bg-light p-4">
-            <div class="d-flex pb-3">
-                <i class="bi bi-lock"></i>
-                <h3 class>Secure Sign in</h3>
-            </div>
-            <form action="" class="d-flex flex-column" method="get">
-                <label class="fw-semibold pb-1" for="username">Username</label><input class="form-control mb-3" id=""
-                                                                                      name="username" type="text"
-                                                                                      value="anna_admin">
-                <label class="fw-semibold pb-1" for="password">Password</label><input class="form-control mb-3"
-                                                                                      name="password" type="password"
-                                                                                      value="lalala">
-                <div class="">
-                    <i class="bi bi-box-arrow-in-right"></i><input class="btn btn-dark" type="submit" value="Sign in">
+        <div class="col-12 col-md-3 ">
+            <div class="bg-light p-4">
+                <div class="d-flex pb-3">
+                    <i class="bi bi-lock"></i>
+                    <h3 class>Secure Sign in</h3>
                 </div>
-            </form>
+                <form action="" class="d-flex flex-column" method="get">
+                    <label class="fw-semibold pb-1" for="username">Username</label><input class="form-control mb-3"
+                                                                                          id=""
+                                                                                          name="username" type="text"
+                                                                                          value="anna_admin">
+                    <label class="fw-semibold pb-1" for="password">Password</label><input class="form-control mb-3"
+                                                                                          name="password"
+                                                                                          type="password"
+                                                                                          value="lalala">
+                    <div class="">
+                        <i class="bi bi-box-arrow-in-right"></i><input class="btn btn-dark" type="submit"
+                                                                       value="Sign in">
+                    </div>
+            </div>
         </div>
         <!-- TRY EITHER OF THE FOLL -->
         <div class="col-12 col-md-6 px-4">
@@ -102,10 +107,22 @@
         </div>
     </div>
 </div>
-<footer class="bg-light position-absolute bottom-0" ">
-    <div><span>2015 - The Symfony project</span>
-        <span>MIT Licence</span></div>
+<!-- FOOTER -->
+<footer class="bg-light mt-auto py-3">
+    <div class="container d-flex justify-content-between">
+        <div class="text-secondary d-flex flex-column">
+            <span class="">©2015 - The Symfony project</span>
+            <span class="">MIT Licence</span>
+        </div>
+        <div class="text-secondary d-flex align-items-center">
+            <i class="mx-3 fs-5 bi bi-twitter"></i>
+            <i class=" fs-5 bi bi-facebook"></i>
+        </div>
+    </div>
 </footer>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
